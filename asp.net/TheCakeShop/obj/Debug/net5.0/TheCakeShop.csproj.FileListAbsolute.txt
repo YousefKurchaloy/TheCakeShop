@@ -64,3 +64,7 @@ C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\TheCakeShop\obj\Debug\net5.0\Th
 C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\TheCakeShop\obj\Debug\net5.0\ref\TheCakeShop.dll
 C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\TheCakeShop\obj\Debug\net5.0\TheCakeShop.pdb
 C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\TheCakeShop\obj\Debug\net5.0\TheCakeShop.genruntimeconfig.cache
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\TheCakeShop\bin\Debug\net5.0\Entities.dll
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\TheCakeShop\bin\Debug\net5.0\Utilities.dll
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\TheCakeShop\bin\Debug\net5.0\Entities.pdb
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\TheCakeShop\bin\Debug\net5.0\Utilities.pdb

@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "c3417ad4-22b1-4950-9c8e-61e24a0ed1b8": {
+      "ProjectGuid": "c3417ad4-22b1-4950-9c8e-61e24a0ed1b8",
+      "DisplayName": "TheCakeShop",
+      "ColorIndex": 0
+    },
+    "0845743c-5659-4b4a-9426-18f216715765": {
+      "ProjectGuid": "0845743c-5659-4b4a-9426-18f216715765",
+      "DisplayName": "Entities",
+      "ColorIndex": 1
+    },
+    "74f41837-5c90-472b-918b-fe5f685179c2": {
+      "ProjectGuid": "74f41837-5c90-472b-918b-fe5f685179c2",
+      "DisplayName": "Utilities",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

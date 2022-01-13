@@ -1,0 +1,12 @@
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Utilities\bin\Debug\net5.0\Utilities.deps.json
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Utilities\bin\Debug\net5.0\Utilities.dll
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Utilities\bin\Debug\net5.0\ref\Utilities.dll
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Utilities\bin\Debug\net5.0\Utilities.pdb
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Utilities\obj\Debug\net5.0\Utilities.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Utilities\obj\Debug\net5.0\Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Utilities\obj\Debug\net5.0\Utilities.AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Utilities\obj\Debug\net5.0\Utilities.AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Utilities\obj\Debug\net5.0\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Utilities\obj\Debug\net5.0\Utilities.dll
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Utilities\obj\Debug\net5.0\ref\Utilities.dll
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Utilities\obj\Debug\net5.0\Utilities.pdb
