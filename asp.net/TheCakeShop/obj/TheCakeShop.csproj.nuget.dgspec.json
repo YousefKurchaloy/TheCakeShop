@@ -62,6 +62,64 @@
         }
       }
     },
+    "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Utilities\\Utilities.csproj": {
+                "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Utilities\\Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\TheCakeShop\\TheCakeShop.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -88,6 +146,9 @@
             "projectReferences": {
               "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Entities\\Entities.csproj"
+              },
+              "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj"
               },
               "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Utilities\\Utilities.csproj": {
                 "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Utilities\\Utilities.csproj"

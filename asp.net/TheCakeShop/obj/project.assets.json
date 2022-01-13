@@ -1653,6 +1653,19 @@
           "bin/placeholder/Entities.dll": {}
         }
       },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Utilities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
+      },
       "Utilities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6104,6 +6117,11 @@
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
     },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
+    },
     "Utilities/1.0.0": {
       "type": "project",
       "path": "../Utilities/Utilities.csproj",
@@ -6117,6 +6135,7 @@
       "Microsoft.EntityFrameworkCore >= 5.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.13",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.13",
+      "Models >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3",
       "Utilities >= 1.0.0"
     ]
@@ -6150,6 +6169,9 @@
           "projectReferences": {
             "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Entities\\Entities.csproj"
+            },
+            "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj"
             },
             "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Utilities\\Utilities.csproj": {
               "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Utilities\\Utilities.csproj"

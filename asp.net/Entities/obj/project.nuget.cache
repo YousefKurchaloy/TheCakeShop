@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "3q89Eaa/Ve1RXlO4FcP+A2fcIOnaswpRPzUcq0xF+kMxrfDdJ2PKeLjWcJmkeLwLdxLid1ffXduO4noMWCTarA==",
+  "dgSpecHash": "LwXzIgxqc59qS7DriE+otYeH7rJKLAtiMlveFHFMlFLB9rQbFfR1ruV9MbFdJQ47YRCEkus6HH7aWqXdJQG9GA==",
   "success": true,
   "projectFilePath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Entities\\Entities.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

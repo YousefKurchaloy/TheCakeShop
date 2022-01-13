@@ -316,11 +316,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Entities\\Entities.csproj",
-      "projectName": "Entities",
-      "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj",
+      "projectName": "Models",
+      "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Entities\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
