@@ -4,6 +4,6 @@
     {
         Making,
         Shipping,
-        Delivared
+        Delivered
     }
 }
