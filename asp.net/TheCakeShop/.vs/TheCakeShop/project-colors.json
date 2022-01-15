@@ -20,7 +20,12 @@
       "ProjectGuid": "74f41837-5c90-472b-918b-fe5f685179c2",
       "DisplayName": "Utilities",
       "ColorIndex": 2
+    },
+    "5bff8689-9152-43cc-ada7-ca4291a12186": {
+      "ProjectGuid": "5bff8689-9152-43cc-ada7-ca4291a12186",
+      "DisplayName": "Models",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }
