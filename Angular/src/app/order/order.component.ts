@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Order } from '../shared/models/Order';
+import { OrderService } from './order.service';
 
 @Component({
   selector: 'app-order',
@@ -6,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order.component.css'],
 })
 export class OrderComponent implements OnInit {
-  constructor() {}
+  constructor(private orderSvc: OrderService) {}
 
-  ngOnInit(): void {}
+  orders!: Order[];
+
+  ngOnInit(): void {
+    this.getOrders();
+  }
+
+  private getOrders() {
+    this.orderSvc.getOrders().subscribe((orderFromServer) => {
+      this.orders = orderFromServer;
+    });
+  }
 }

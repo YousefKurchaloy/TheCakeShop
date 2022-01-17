@@ -1,5 +1,5 @@
 import { Gender } from '../enums/Gender.enum';
-import { Order } from './order';
+import { Order } from './Order';
 
 export interface Customer {
   id: number;
