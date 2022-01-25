@@ -1,1 +1,56 @@
-<p>customer works!</p>
+<div class="container my-4">
+  <h1 class="page-title">Customer</h1>
+  <hr />
+
+  <button
+    mat-raised-button
+    color="primary"
+    class="mb-3"
+    [routerLink]="['/customers/add']"
+  >
+    Add New Customer
+  </button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Customer#</th>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Gender</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers">
+        <td>{{ customer.id }}</td>
+        <td>{{ customer.fullName }}</td>
+        <td>{{ customer.phoneNo }}</td>
+        <td>{{ customer.gender }}</td>
+        <td>
+          <a
+            class="text-info"
+            matTooltip="Booking Details"
+            [routerLink]="['/customers/', customer.id]"
+          >
+            <mat-icon>info</mat-icon>
+          </a>
+          <a
+            class="ml-1"
+            matTooltip="Edit Booking"
+            [routerLink]="['/customers/edit', customer.id]"
+          >
+            <mat-icon>edit</mat-icon>
+          </a>
+          <a
+            class="text-danger pointer"
+            (click)="deleteCustomer(customer.id)"
+            matTooltip="Delete Booking"
+          >
+            <mat-icon>delete</mat-icon>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
