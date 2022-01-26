@@ -1,0 +1,33 @@
+footer {
+  background-color: #673ab7;
+  color: #ffffff;
+  position: relative;
+  bottom: 0;
+  display: block;
+}
+footer .footer-copyright {
+  background-color: #491a8e;
+  text-align: center;
+  padding: 10px;
+}
+mat-icon {
+  transition: ease 300ms;
+}
+.fb-logo {
+  color: #4267b2;
+}
+.fb-logo:hover {
+  color: #0e3c97;
+}
+.wa-logo {
+  color: #25d366;
+}
+.wa-logo:hover {
+  color: #0f923f;
+}
+.phone-logo {
+  color: #e67e00;
+}
+.phone-logo:hover {
+  color: #945100;
+}

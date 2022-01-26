@@ -15,6 +15,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { CustomerDeleteDialogComponent } from './customer/customer-delete-dialog/customer-delete-dialog.component';
+import { ProductComponent } from './product/product.component';
+import { IngredientComponent } from './ingredient/ingredient.component';
+import { OrderAddEditComponent } from './order/order-add-edit/order-add-edit.component';
+import { OrderDetailsComponent } from './order/order-details/order-details.component';
+import { OrderDeleteDialogComponent } from './order/order-delete-dialog/order-delete-dialog.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +30,11 @@ import { CustomerDeleteDialogComponent } from './customer/customer-delete-dialog
     CustomerDetailsComponent,
     HomeComponent,
     CustomerDeleteDialogComponent,
+    ProductComponent,
+    IngredientComponent,
+    OrderAddEditComponent,
+    OrderDetailsComponent,
+    OrderDeleteDialogComponent,
   ],
   imports: [
     BrowserModule,

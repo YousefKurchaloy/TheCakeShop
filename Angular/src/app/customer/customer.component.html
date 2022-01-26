@@ -1,5 +1,5 @@
 <div class="container my-4">
-  <h1 class="page-title">Customer</h1>
+  <h1 class="page-title">Customers</h1>
   <hr />
 
   <button
@@ -30,14 +30,14 @@
         <td>
           <a
             class="text-info"
-            matTooltip="Booking Details"
+            matTooltip="Customer Details"
             [routerLink]="['/customers/', customer.id]"
           >
             <mat-icon>info</mat-icon>
           </a>
           <a
             class="ml-1"
-            matTooltip="Edit Booking"
+            matTooltip="Edit Customer"
             [routerLink]="['/customers/edit', customer.id]"
           >
             <mat-icon>edit</mat-icon>
@@ -45,7 +45,7 @@
           <a
             class="text-danger pointer"
             (click)="deleteCustomer(customer.id)"
-            matTooltip="Delete Booking"
+            matTooltip="Delete Customer"
           >
             <mat-icon>delete</mat-icon>
           </a>

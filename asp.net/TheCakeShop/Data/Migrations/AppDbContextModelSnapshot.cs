@@ -111,6 +111,9 @@ namespace TheCakeShop.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("ProductPrice")
+                        .HasColumnType("float");
+
                     b.HasKey("Id");
 
                     b.ToTable("Products");

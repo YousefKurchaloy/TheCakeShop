@@ -1,3 +1,56 @@
-<div *ngFor="let order of orders">
-  <div>id {{ order.id }}</div>
+<div class="container my-4">
+  <h1 class="page-title">Orders</h1>
+  <hr />
+
+  <button
+    mat-raised-button
+    color="primary"
+    class="mb-3"
+    [routerLink]="['/orders/add']"
+  >
+    Add New Order
+  </button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Order#</th>
+        <th>Price</th>
+        <th>City Number</th>
+        <th>Address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.id }}</td>
+        <td>{{ order.price }}</td>
+        <td>{{ order.city }}</td>
+        <td>{{ order.address }}</td>
+        <td>
+          <a
+            class="text-info"
+            matTooltip="Order Details"
+            [routerLink]="['/orders/', order.id]"
+          >
+            <mat-icon>info</mat-icon>
+          </a>
+          <a
+            class="ml-1"
+            matTooltip="Edit Order"
+            [routerLink]="['/orders/edit', order.id]"
+          >
+            <mat-icon>edit</mat-icon>
+          </a>
+          <a
+            class="text-danger pointer"
+            (click)="deleteOrder(order.id)"
+            matTooltip="Delete Order"
+          >
+            <mat-icon>delete</mat-icon>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
