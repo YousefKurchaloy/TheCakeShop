@@ -22,6 +22,7 @@ import { ProductDeleteDialogComponent } from './product/product-delete-dialog/pr
 import { ProductAddEditComponent } from './product/product-add-edit/product-add-edit.component';
 import { IngredientAddEditComponent } from './ingredient/ingredient-add-edit/ingredient-add-edit.component';
 import { IngredientDeleteDialogComponent } from './ingredient/ingredient-delete-dialog/ingredient-delete-dialog.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { IngredientDeleteDialogComponent } from './ingredient/ingredient-delete-
     ProductAddEditComponent,
     IngredientAddEditComponent,
     IngredientDeleteDialogComponent,
+    ScrollToTopComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,11 +4,13 @@ footer {
   position: relative;
   bottom: 0;
   display: block;
+  padding-top: 60px;
 }
 footer .footer-copyright {
   background-color: #491a8e;
   text-align: center;
   padding: 10px;
+  margin-top: 40px;
 }
 mat-icon {
   transition: ease 300ms;
