@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
-import { City } from 'src/app/shared/enums/City.enum';
-import { OrderStatus } from 'src/app/shared/enums/OrderStatus.enum';
 import { PageMode } from 'src/app/shared/enums/PageMode';
 import { Order } from 'src/app/shared/models/Order';
-import { OrderDeleteDialogComponent } from '../order-delete-dialog/order-delete-dialog.component';
 import { OrderService } from '../order.service';
 
 @Component({

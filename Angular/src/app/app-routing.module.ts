@@ -7,6 +7,9 @@ import { OrderComponent } from './order/order.component';
 import { HomeComponent } from './home/home.component';
 import { OrderAddEditComponent } from './order/order-add-edit/order-add-edit.component';
 import { OrderDetailsComponent } from './order/order-details/order-details.component';
+import { ProductComponent } from './product/product.component';
+import { ProductAddEditComponent } from './product/product-add-edit/product-add-edit.component';
+import { ProductDetailsComponent } from './product/product-details/product-details.component';
 
 const routes: Routes = [
   { path: 'customers', component: CustomerComponent },
@@ -18,6 +21,11 @@ const routes: Routes = [
   { path: 'orders/add', component: OrderAddEditComponent },
   { path: 'orders/:id', component: OrderDetailsComponent },
   { path: 'orders/edit/:id', component: OrderAddEditComponent },
+
+  { path: 'products', component: ProductComponent },
+  { path: 'products/add', component: ProductAddEditComponent },
+  { path: 'products/:id', component: ProductDetailsComponent },
+  { path: 'products/edit/:id', component: ProductAddEditComponent },
 
   { path: '**', component: HomeComponent },
 ];

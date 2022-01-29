@@ -20,6 +20,9 @@ import { IngredientComponent } from './ingredient/ingredient.component';
 import { OrderAddEditComponent } from './order/order-add-edit/order-add-edit.component';
 import { OrderDetailsComponent } from './order/order-details/order-details.component';
 import { OrderDeleteDialogComponent } from './order/order-delete-dialog/order-delete-dialog.component';
+import { ProductDeleteDialogComponent } from './product/product-delete-dialog/product-delete-dialog.component';
+import { ProductAddEditComponent } from './product/product-add-edit/product-add-edit.component';
+import { ProductDetailsComponent } from './product/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,9 @@ import { OrderDeleteDialogComponent } from './order/order-delete-dialog/order-de
     OrderAddEditComponent,
     OrderDetailsComponent,
     OrderDeleteDialogComponent,
+    ProductDeleteDialogComponent,
+    ProductAddEditComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,

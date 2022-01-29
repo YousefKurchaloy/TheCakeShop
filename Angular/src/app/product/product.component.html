@@ -1,1 +1,45 @@
-<p>product works!</p>
+<div class="container my-4">
+  <h1 class="page-title">Products</h1>
+  <hr />
+
+  <button
+    mat-raised-button
+    color="primary"
+    class="mb-3"
+    [routerLink]="['/products/add']"
+  >
+    Add New Product
+  </button>
+  <div class="row">
+    <div *ngFor="let product of products" class="card col-md-3 m-auto">
+      <div class="card-body">
+        <h3 class="card-title">{{ product.name }}</h3>
+        <p class="card-subtitle mb-2 text-muted">
+          JOD {{ product.productPrice }}
+        </p>
+        <p class="card-text">{{ product.description }}</p>
+        <a
+          class="text-info"
+          matTooltip="Product Details"
+          [routerLink]="['/products/', product.id]"
+        >
+          <mat-icon>info</mat-icon>
+        </a>
+        <a
+          class="ml-1"
+          matTooltip="Edit Product"
+          [routerLink]="['/products/edit', product.id]"
+        >
+          <mat-icon>edit</mat-icon>
+        </a>
+        <a
+          class="text-danger pointer"
+          (click)="deleteProduct(product.id)"
+          matTooltip="Delete Product"
+        >
+          <mat-icon>delete</mat-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

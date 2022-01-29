@@ -1,0 +1,48 @@
+<div class="container my-4">
+  <h1 *ngIf="productId == pageModeEnum.Create">Create a new Product</h1>
+  <h1 *ngIf="pageMode == pageModeEnum.Edit">Edit Product</h1>
+  <hr />
+
+  <form [formGroup]="productForm" (ngSubmit)="addEditProduct()">
+    <div>
+      <button class="mr-2" type="submit" mat-raised-button color="primary">
+        <span *ngIf="pageMode == pageModeEnum.Create">Create</span>
+        <span *ngIf="pageMode == pageModeEnum.Edit">Save</span>
+      </button>
+      <button mat-raised-button [routerLink]="['/products']">Cancel</button>
+    </div>
+    <hr />
+
+    <div>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Description</mat-label>
+        <input
+          matInput
+          placeholder="Description"
+          formControlName="description"
+          required
+        />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Price</mat-label>
+        <span class="pr-2 pb-4" matPrefix>JOD </span>
+        <input
+          matInput
+          placeholder="Price "
+          formControlName="productPrice"
+          required
+        />
+        <mat-error>Price is required</mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+</div>
