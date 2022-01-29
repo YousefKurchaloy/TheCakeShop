@@ -1,1 +1,43 @@
-<p>ingredient works!</p>
+<div class="container my-4">
+  <h1 class="page-title">Ingredients</h1>
+  <hr />
+
+  <button
+    mat-raised-button
+    color="primary"
+    class="mb-3"
+    [routerLink]="['/ingredients/add']"
+  >
+    Add New Ingredient
+  </button>
+  <div class="row">
+    <div *ngFor="let ingredient of ingredients" class="card col-md-3 m-auto">
+      <div class="card-body">
+        <h3 class="card-title">{{ ingredient.name }}</h3>
+        <p *ngIf="this.ingredient.isVegan == true">Vegan</p>
+        <p *ngIf="this.ingredient.isVegan == false">Not Vegan</p>
+        <a
+          class="text-info"
+          matTooltip="Ingredient Details"
+          [routerLink]="['/ingredients/', ingredient.id]"
+        >
+          <mat-icon>info</mat-icon>
+        </a>
+        <a
+          class="ml-1"
+          matTooltip="Edit Ingredient"
+          [routerLink]="['/ingredients/edit', ingredient.id]"
+        >
+          <mat-icon>edit</mat-icon>
+        </a>
+        <a
+          class="text-danger pointer"
+          (click)="deleteIngredient(ingredient.id)"
+          matTooltip="Delete Ingredient"
+        >
+          <mat-icon>delete</mat-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

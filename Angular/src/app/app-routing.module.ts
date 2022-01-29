@@ -10,6 +10,8 @@ import { OrderDetailsComponent } from './order/order-details/order-details.compo
 import { ProductComponent } from './product/product.component';
 import { ProductAddEditComponent } from './product/product-add-edit/product-add-edit.component';
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
+import { IngredientAddEditComponent } from './ingredient/ingredient-add-edit/ingredient-add-edit.component';
+import { IngredientComponent } from './ingredient/ingredient.component';
 
 const routes: Routes = [
   { path: 'customers', component: CustomerComponent },
@@ -26,6 +28,11 @@ const routes: Routes = [
   { path: 'products/add', component: ProductAddEditComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'products/edit/:id', component: ProductAddEditComponent },
+
+  { path: 'ingredients', component: IngredientComponent },
+  { path: 'ingredients/add', component: IngredientAddEditComponent },
+  // { path: 'ingredients/:id', component: IngredientDetailsComponent },
+  { path: 'ingredients/edit/:id', component: IngredientAddEditComponent },
 
   { path: '**', component: HomeComponent },
 ];

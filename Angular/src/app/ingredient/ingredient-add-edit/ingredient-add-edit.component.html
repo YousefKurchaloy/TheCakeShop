@@ -1,0 +1,31 @@
+<div class="container my-4">
+  <h1 *ngIf="ingredientId == pageModeEnum.Create">Create a new Ingredient</h1>
+  <h1 *ngIf="pageMode == pageModeEnum.Edit">Edit Ingredient</h1>
+  <hr />
+
+  <form [formGroup]="ingredientForm" (ngSubmit)="addEditIngredient()">
+    <div>
+      <button class="mr-2" type="submit" mat-raised-button color="primary">
+        <span *ngIf="pageMode == pageModeEnum.Create">Create</span>
+        <span *ngIf="pageMode == pageModeEnum.Edit">Save</span>
+      </button>
+      <button mat-raised-button [routerLink]="['/ingredients']">Cancel</button>
+    </div>
+    <hr />
+    <div>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Ingredient Name</mat-label>
+        <input
+          matInput
+          placeholder="Ingredient Name"
+          formControlName="name"
+          required
+        />
+        <mat-error>Name is required</mat-error>
+      </mat-form-field>
+    </div>
+    <mat-form-field>
+      <mat-checkbox formControlName="isVegan">Vegan?</mat-checkbox>
+    </mat-form-field>
+  </form>
+</div>
