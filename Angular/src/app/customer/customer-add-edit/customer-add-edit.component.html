@@ -34,32 +34,47 @@
     <div>
       <mat-form-field appearance="fill" class="w-100">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="Email" formControlName="email" required />
-        <mat-error>Email is required</mat-error>
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field appearance="fill" class="w-100">
-        <mat-label>Phone Number</mat-label>
         <input
+          name="email"
           matInput
-          placeholder="Phone Number"
-          formControlName="phoneNo"
+          placeholder="Email"
+          formControlName="email"
+          ngModel
+          email
           required
         />
-        <mat-error>Phone Number is required</mat-error>
+        <mat-error *ngIf="customerForm.controls['email'].errors?.['required']">
+          Email is required
+        </mat-error>
+        <mat-error *ngIf="customerForm.controls['email'].errors?.['pattern']">
+          Please provide a valid email address
+        </mat-error>
       </mat-form-field>
     </div>
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Phone Number</mat-label>
+          <input
+            matInput
+            placeholder="Phone Number"
+            formControlName="phoneNo"
+            required
+          />
+          <mat-error>Phone Number is required</mat-error>
+        </mat-form-field>
+      </div>
 
-    <div>
-      <mat-form-field appearance="fill" class="w-100">
-        <mat-label>Gender</mat-label>
-        <mat-select formControlName="gender" required>
-          <mat-option value="Male">Male</mat-option>
-          <mat-option value="Female">Female</mat-option>
-        </mat-select>
-        <mat-error>Gender is required</mat-error>
-      </mat-form-field>
+      <div class="col-md-6">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Gender</mat-label>
+          <mat-select formControlName="gender" required>
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+          </mat-select>
+          <mat-error>Gender is required</mat-error>
+        </mat-form-field>
+      </div>
     </div>
   </form>
 </div>

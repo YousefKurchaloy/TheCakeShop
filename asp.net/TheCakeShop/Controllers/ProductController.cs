@@ -32,7 +32,7 @@ namespace TheCakeShop.Controllers
         [HttpGet]
         public async Task<IEnumerable<ProductDto>> GetProducts()
         {
-            var products = await _context.Products.ToListAsync();
+            var products = await _context.Products.Include(p => p.Ingredients).ToListAsync();
             var productsDtos = _mapper.Map<List<Product>, List<ProductDto>>(products);
             return productsDtos;
         }
@@ -47,20 +47,25 @@ namespace TheCakeShop.Controllers
         }
 
         [HttpPost]
-        public async Task CreateProduct([FromBody] ProductDto productDto)
+        public async Task<int> CreateProduct([FromBody] CreateEditProductDto createEditProductDto)
         {
-            var product = _mapper.Map<ProductDto, Product>(productDto);
+            var product = _mapper.Map<CreateEditProductDto, Product>(createEditProductDto);
+            await AddIngredientsToProduct(createEditProductDto, product);
+
             await _context.AddAsync(product);
-            await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync();
         }
 
         [HttpPut("{id}")]
-        public async Task EditProduct(int id, [FromBody] ProductDto productDto)
+        public async Task EditProduct(int id, [FromBody] CreateEditProductDto createEditProductDto)
         {
             var product = await _context.Products.FindAsync(id);
-            _mapper.Map(productDto, product);
+            _mapper.Map(createEditProductDto, product);
+
             _context.Update(product);
             await _context.SaveChangesAsync();
+
+            await UpdateProductIngredientsAndSave(createEditProductDto, product);
         }
 
         [HttpDelete("{id}")]
@@ -68,6 +73,32 @@ namespace TheCakeShop.Controllers
         {
             var product = await _context.Products.FindAsync(id);
             _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
+
+        }
+
+        #endregion
+
+        #region Private methods
+
+        private async Task AddIngredientsToProduct(CreateEditProductDto createEditProductDto, Product product)
+        {
+            var ingredients = await _context.Ingredients.Where(i => createEditProductDto.IngredientsIds.Contains(i.Id)).ToListAsync();
+            product.Ingredients.AddRange(ingredients);
+        }
+        private async Task UpdateProductIngredientsAndSave(CreateEditProductDto createEditProductDto, Product inputProduct)
+        {
+            var product = await _context.Products.Include(p => p.Ingredients).Where(p => p.Id == inputProduct.Id).SingleAsync();
+
+            product.Ingredients.Clear();
+             
+            if(createEditProductDto.IngredientsIds != null && createEditProductDto.IngredientsIds.Count > 0)
+            {
+                var ingredients = await _context.Ingredients.Where(ing => createEditProductDto.IngredientsIds.Contains(ing.Id)).ToListAsync();    
+                product.Ingredients.AddRange(ingredients);
+            
+            }
+            _context.Update(product);
             await _context.SaveChangesAsync();
 
         }
