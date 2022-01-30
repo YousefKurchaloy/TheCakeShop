@@ -17,7 +17,7 @@ export class IngredientAddEditComponent implements OnInit {
   ingredientForm = this.fb.group({
     id: [0],
     name: ['', Validators.required],
-    isVegan: [false],
+    isVegan: [null, Validators.required],
   });
   constructor(
     private fb: FormBuilder,
