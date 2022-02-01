@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace Models.Product
 {
-    public class CreateEditProductDto
+    public class ProductCreateEditDto
     {
-        public CreateEditProductDto()
+        public ProductCreateEditDto()
         {
             IngredientsIds = new List<int>();
         }

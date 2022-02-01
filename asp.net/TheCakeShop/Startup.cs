@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using TheCakeShop.Data;
 
@@ -33,6 +34,10 @@ namespace TheCakeShop
             services.AddControllers()
             .AddNewtonsoftJson(options =>
             options.SerializerSettings.Converters.Add(new StringEnumConverter()));
+
+            services.AddControllers()
+            .AddNewtonsoftJson(options =>
+            options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
 
             services.AddSwaggerGen(c =>
             {

@@ -13,7 +13,7 @@
     </div>
     <hr />
 
-    <div>
+    <!-- <div>
       <mat-form-field appearance="fill" class="w-100">
         <mat-label>price</mat-label>
         <span class="pr-2 pb-4" matPrefix>JOD </span>
@@ -25,7 +25,7 @@
         />
         <mat-error>Price is required</mat-error>
       </mat-form-field>
-    </div>
+    </div> -->
     <div>
       <mat-form-field appearance="fill" class="w-100">
         <mat-label>City</mat-label>
@@ -55,6 +55,22 @@
           formControlName="address"
           required
         />
+        <mat-error>Address is required</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Products</mat-label>
+        <mat-select
+          formControlName="products"
+          multiple
+          [compareWith]="compareProducts"
+        >
+          <mat-option *ngFor="let product of productsLookup" [value]="product">
+            {{ product.name }}
+          </mat-option>
+        </mat-select>
+        <mat-error>Products are required</mat-error>
       </mat-form-field>
     </div>
   </form>

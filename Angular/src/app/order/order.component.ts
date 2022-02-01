@@ -47,5 +47,6 @@ export class OrderComponent implements OnInit {
       this.orders = ordersFromServer;
     });
   }
+
   //#endregion
 }

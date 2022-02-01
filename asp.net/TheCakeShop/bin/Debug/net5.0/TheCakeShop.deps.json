@@ -36,6 +36,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Entities": "1.0.0",
           "Microsoft.AspNet.WebApi.Cors": "5.2.7",
+          "Microsoft.AspNet.WebApi.WebHost": "5.2.7",
           "Microsoft.EntityFrameworkCore": "5.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.13",
@@ -420,6 +421,20 @@
         },
         "compile": {
           "lib/net45/System.Web.Http.Cors.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.WebHost/5.2.7": {
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Core": "5.2.7"
+        },
+        "runtime": {
+          "lib/net45/System.Web.Http.WebHost.dll": {
+            "assemblyVersion": "5.2.7.0",
+            "fileVersion": "5.2.61128.0"
+          }
+        },
+        "compile": {
+          "lib/net45/System.Web.Http.WebHost.dll": {}
         }
       },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -3803,6 +3818,13 @@
       "sha512": "sha512-LUY5ufoiYLHKZXdrrNe7GlAwmu9WlyrX5iUtBSLwFZ31/tvPobyU7j1E31OWVdGZMBvRCxKbfyB7unxgrjTRpA==",
       "path": "microsoft.aspnet.webapi.cors/5.2.7",
       "hashPath": "microsoft.aspnet.webapi.cors.5.2.7.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebApi.WebHost/5.2.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-m3TyD7R/cmbfXqkfgcnE0J/UEKklcPP5gsXR96//vLx2kTnsxuOqNlulJLl+Oto4fZMvhVPFZVR+KG9cLZM/PA==",
+      "path": "microsoft.aspnet.webapi.webhost/5.2.7",
+      "hashPath": "microsoft.aspnet.webapi.webhost.5.2.7.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "type": "package",

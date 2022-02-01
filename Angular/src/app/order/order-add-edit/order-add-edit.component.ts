@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProductService } from 'src/app/product/product.service';
 import { PageMode } from 'src/app/shared/enums/PageMode';
 import { Order } from 'src/app/shared/models/Order';
+import { Product } from 'src/app/shared/models/Product';
 import { OrderService } from '../order.service';
 
 @Component({
@@ -13,20 +15,24 @@ import { OrderService } from '../order.service';
 export class OrderAddEditComponent implements OnInit {
   pageModeEnum = PageMode;
   orderId: number = 0;
+
+  productsLookup!: Product[];
+
   pageMode: PageMode = PageMode.Create;
   orderForm = this.fb.group({
     id: [0],
-    price: ['', Validators.required],
     city: ['', Validators.required],
     address: ['', Validators.required],
     orderStatus: ['Making', Validators.required],
+    products: ['', Validators.required],
   });
 
   constructor(
     private fb: FormBuilder,
     private router: Router,
     private route: ActivatedRoute,
-    private orderSvc: OrderService
+    private orderSvc: OrderService,
+    private productSvc: ProductService
   ) {}
 
   ngOnInit(): void {
@@ -35,6 +41,8 @@ export class OrderAddEditComponent implements OnInit {
     if (this.pageMode == PageMode.Edit) {
       this.preparePageForEditMode();
     }
+
+    this.getProducts();
   }
 
   addEditOrder(): void {
@@ -51,6 +59,12 @@ export class OrderAddEditComponent implements OnInit {
         });
       }
     }
+  }
+
+  compareProducts(product1: Product, product2: Product): boolean {
+    return product1 && product2
+      ? product1.id === product2.id
+      : product1 === product2;
   }
 
   //#region Private functions
@@ -72,6 +86,12 @@ export class OrderAddEditComponent implements OnInit {
       this.orderId = Number(this.route.snapshot.paramMap.get('id'));
       this.pageMode = PageMode.Edit;
     }
+  }
+
+  private getProducts() {
+    this.productSvc.getProducts().subscribe((res) => {
+      this.productsLookup = res;
+    });
   }
 
   //#endregion

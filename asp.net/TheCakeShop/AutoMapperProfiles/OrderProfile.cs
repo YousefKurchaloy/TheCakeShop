@@ -9,6 +9,7 @@ namespace TheCakeShop.AutoMapperProfiles
         public OrderProfile()
         {
             CreateMap<Order, OrderDto>().ReverseMap();
+            CreateMap<Order, OrderCreateEditDto>().ReverseMap();
         }
     }
 }

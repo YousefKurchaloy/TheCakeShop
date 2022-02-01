@@ -9,7 +9,7 @@ namespace TheCakeShop.AutoMapperProfiles
         public ProductProfile()
         {
             CreateMap<Product, ProductDto>().ReverseMap();
-            CreateMap<Product, CreateEditProductDto>().ReverseMap();
+            CreateMap<Product, ProductCreateEditDto>().ReverseMap();
         }
     }
 }
