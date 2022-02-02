@@ -17,3 +17,7 @@ a {
 .text-fancy {
   font-family: "Pacifico", cursive !important;
 }
+
+.pointer:hover {
+  cursor: pointer !important;
+}

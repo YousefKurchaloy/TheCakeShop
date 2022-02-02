@@ -25,27 +25,29 @@
             JOD {{ product.productPrice }}
           </p>
           <p class="card-text">{{ product.description }}</p>
-          <a
-            class="text-info"
-            matTooltip="Product Details"
-            [routerLink]="['/products/', product.id]"
-          >
-            <mat-icon>info</mat-icon>
-          </a>
-          <a
-            class="ml-1"
-            matTooltip="Edit Product"
-            [routerLink]="['/products/edit', product.id]"
-          >
-            <mat-icon>edit</mat-icon>
-          </a>
-          <a
-            class="text-danger pointer"
-            (click)="deleteProduct(product.id)"
-            matTooltip="Delete Product"
-          >
-            <mat-icon>delete</mat-icon>
-          </a>
+          <div class="text-center">
+            <a
+              class="text-info"
+              matTooltip="Product Details"
+              [routerLink]="['/products/', product.id]"
+            >
+              <mat-icon>info</mat-icon>
+            </a>
+            <a
+              class="ml-1"
+              matTooltip="Edit Product"
+              [routerLink]="['/products/edit', product.id]"
+            >
+              <mat-icon>edit</mat-icon>
+            </a>
+            <a
+              class="text-danger pointer"
+              (click)="deleteProduct(product.id)"
+              matTooltip="Delete Product"
+            >
+              <mat-icon>delete</mat-icon>
+            </a>
+          </div>
         </div>
       </div>
     </div>
