@@ -6,6 +6,7 @@ export interface Product {
   name: string;
   description: string;
   productPrice: number;
+  picUrl: string;
   ingredients: Ingredient[];
   orders: Order[];
 }

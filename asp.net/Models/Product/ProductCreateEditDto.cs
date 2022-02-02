@@ -14,6 +14,7 @@ namespace Models.Product
         public string Name { get; set; }
         public string Description { get; set; }
         public double ProductPrice { get; set; }
+        public string PicUrl { get; set; }
         public List<int> IngredientsIds { get; set; }
         public List<OrderDto> Orders { get; set; }
     }

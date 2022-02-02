@@ -11,34 +11,42 @@
     Add New Product
   </button>
   <div class="row">
-    <div *ngFor="let product of products" class="card col-md-3 mx-4 my-3">
-      <div class="card-body">
-        <h3 class="card-title">{{ product.name }}</h3>
-        <p class="card-subtitle mb-2 text-muted">
-          JOD {{ product.productPrice }}
-        </p>
-        <p class="card-text">{{ product.description }}</p>
-        <a
-          class="text-info"
-          matTooltip="Product Details"
-          [routerLink]="['/products/', product.id]"
-        >
-          <mat-icon>info</mat-icon>
-        </a>
-        <a
-          class="ml-1"
-          matTooltip="Edit Product"
-          [routerLink]="['/products/edit', product.id]"
-        >
-          <mat-icon>edit</mat-icon>
-        </a>
-        <a
-          class="text-danger pointer"
-          (click)="deleteProduct(product.id)"
-          matTooltip="Delete Product"
-        >
-          <mat-icon>delete</mat-icon>
-        </a>
+    <div *ngFor="let product of products" class="card p-0 col-md-3 mx-4 my-3">
+      <div class="card-body p-0">
+        <img
+          class="card-img-top"
+          src="{{ product.picUrl }}"
+          alt="{{ product.name }}"
+        />
+        <div class="px-4 py-2">
+          <h3 class="card-title">{{ product.name }}</h3>
+
+          <p class="card-subtitle mb-2 text-muted">
+            JOD {{ product.productPrice }}
+          </p>
+          <p class="card-text">{{ product.description }}</p>
+          <a
+            class="text-info"
+            matTooltip="Product Details"
+            [routerLink]="['/products/', product.id]"
+          >
+            <mat-icon>info</mat-icon>
+          </a>
+          <a
+            class="ml-1"
+            matTooltip="Edit Product"
+            [routerLink]="['/products/edit', product.id]"
+          >
+            <mat-icon>edit</mat-icon>
+          </a>
+          <a
+            class="text-danger pointer"
+            (click)="deleteProduct(product.id)"
+            matTooltip="Delete Product"
+          >
+            <mat-icon>delete</mat-icon>
+          </a>
+        </div>
       </div>
     </div>
   </div>
