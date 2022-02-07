@@ -14,19 +14,15 @@
   <table class="table">
     <thead>
       <tr>
-        <th>Customer#</th>
         <th>Name</th>
         <th>Phone Number</th>
-        <th>Gender</th>
         <th>Actions</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let customer of customers">
-        <td>{{ customer.id }}</td>
         <td>{{ customer.fullName }}</td>
         <td>{{ customer.phoneNo }}</td>
-        <td>{{ customer.gender }}</td>
         <td>
           <a
             class="text-info"
@@ -48,6 +44,9 @@
             matTooltip="Delete Customer"
           >
             <mat-icon>delete</mat-icon>
+          </a>
+          <a class="pointer">
+            <mat-icon>history</mat-icon>
           </a>
         </td>
       </tr>

@@ -47,7 +47,7 @@ namespace TheCakeShop.Controllers
                 .Orders
                 .Include(o => o.Products)
                 .Include(o => o.Customer)
-                .Where(b => b.Id == id)
+                .Where(o => o.Id == id)
                 .SingleOrDefaultAsync();
 
             var orderDto = _mapper.Map<Order, OrderDto>(order);
@@ -56,28 +56,45 @@ namespace TheCakeShop.Controllers
         }
 
         [HttpPost]
-        public async Task CreateOrder([FromBody] OrderCreateEditDto orderCreateEditDto)
+        public async Task CreateOrder([FromBody] OrderDto orderDto)
         {
-            var order = _mapper.Map<OrderCreateEditDto, Order>(orderCreateEditDto);
-            await AddProductsToOrder(orderCreateEditDto, order);
+            var order = _mapper.Map<OrderDto, Order>(orderDto);
 
-            var orderPriceTotal = order.Products.Sum(item => item.ProductPrice);
-            orderPriceTotal = order.Price;
+            await UpdateOrderProducts(orderDto, order);
+          //var priceTotal = _context.Products
+          //      .Where(p => orderDto.ProductsIds.Contains(p.Id))
+          //      .Sum(p => p.ProductPrice);
+
+            // priceTotal = order.Price;
+            // _context.Orders.AddRange(priceTotal);
 
             await _context.AddAsync(order);
             await _context.SaveChangesAsync();
         }
 
         [HttpPut("{id}")]
-        public async Task EditOrder(int id, [FromBody] OrderCreateEditDto orderCreateEditDto)
+        public async Task EditOrder(int id, [FromBody] OrderDto orderDto)
         {
-            var order = await _context.Orders.FindAsync(id);
-            _mapper.Map(orderCreateEditDto, order);
+            var order = await _context
+                              .Orders
+                              .Include(o => o.Products)
+                              .Include(o => o.Customer)
+                              .Where(o => o.Id == id)
+                              .SingleOrDefaultAsync();
+
+            _mapper.Map(orderDto, order);
+
+            await UpdateOrderProducts(orderDto,order);
+
+            if (orderDto.CustomerId.HasValue)
+            {
+                var customer = await _context.Customers.FindAsync(orderDto.CustomerId);
+                order.Customer = customer;
+            }
 
             _context.Update(order);
             await _context.SaveChangesAsync();
 
-            await UpdateOrderProductsAndSave(orderCreateEditDto,order);
         }
 
         [HttpDelete("{id}")]
@@ -93,24 +110,24 @@ namespace TheCakeShop.Controllers
 
         #region Private methods
 
-        private async Task AddProductsToOrder(OrderCreateEditDto orderCreateEditDto,Order order)
-        {
-            var products = await _context.Products.Where(p => orderCreateEditDto.ProductsIds.Contains(p.Id)).ToListAsync();
-            order.Products.AddRange(products);
-        }
-        private async Task UpdateOrderProductsAndSave(OrderCreateEditDto orderCreateEditDto,Order inputOrder)
-        {
-            var order = await _context.Orders.Include(o => o.Products).Where(o => o.Id == inputOrder.Id).SingleAsync();
+        private async Task UpdateOrderProducts(OrderDto orderDto,Order order)
+
+        {   var productIds = GetProductsIdsFromDto(orderDto);
+            var products = await _context.Products.Where(p => productIds.Contains(p.Id)).ToListAsync();
 
             order.Products.Clear();
+            order.Products.AddRange(products);
+        }
+        private List<int> GetProductsIdsFromDto(OrderDto orderDto)
+        {
+            var productsIds = new List<int>();
 
-            if(orderCreateEditDto != null && orderCreateEditDto.ProductsIds.Count > 0)
+            foreach (var product in orderDto.Products)
             {
-                var products = await _context.Products.Where(p => orderCreateEditDto.ProductsIds.Contains(p.Id)).ToListAsync();
-                order.Products.AddRange(products);
+                productsIds.Add(product.Id);
             }
-            _context.Update(order);
-            await _context.SaveChangesAsync();
+
+            return productsIds;
         }
         #endregion
     }

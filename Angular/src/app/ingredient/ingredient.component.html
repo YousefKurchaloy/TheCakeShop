@@ -17,13 +17,6 @@
         <p *ngIf="this.ingredient.isVegan == true">Vegan</p>
         <p *ngIf="this.ingredient.isVegan == false">Not Vegan</p>
         <a
-          class="text-info"
-          matTooltip="Ingredient Details"
-          [routerLink]="['/ingredients/', ingredient.id]"
-        >
-          <mat-icon>info</mat-icon>
-        </a>
-        <a
           class="ml-1"
           matTooltip="Edit Ingredient"
           [routerLink]="['/ingredients/edit', ingredient.id]"

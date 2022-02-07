@@ -70,7 +70,7 @@ export class ProductAddEditComponent implements OnInit {
     }
   }
 
-  compareIngredients(
+  compareIngredientsFn(
     ingredient1: Ingredient,
     ingredient2: Ingredient
   ): boolean {
@@ -91,6 +91,7 @@ export class ProductAddEditComponent implements OnInit {
           description: productFromServer.description,
           productPrice: productFromServer.productPrice,
           ingredients: productFromServer.ingredients,
+          picUrl: productFromServer.picUrl,
         });
       });
   }

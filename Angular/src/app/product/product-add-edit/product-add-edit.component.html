@@ -59,7 +59,7 @@
         <mat-select
           formControlName="ingredients"
           multiple
-          [compareWith]="compareIngredients"
+          [compareWith]="compareIngredientsFn"
         >
           <mat-option
             *ngFor="let ingredient of ingredientsLookup"

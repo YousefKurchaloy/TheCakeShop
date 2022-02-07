@@ -22,6 +22,9 @@ import { ProductAddEditComponent } from './product/product-add-edit/product-add-
 import { IngredientAddEditComponent } from './ingredient/ingredient-add-edit/ingredient-add-edit.component';
 import { IngredientDeleteDialogComponent } from './ingredient/ingredient-delete-dialog/ingredient-delete-dialog.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { OrderDetailsComponent } from './order/order-details/order-details.component';
+import { ProductDetailsComponent } from './product/product-details/product-details.component';
+import { CustomerDetailsComponent } from './customer/customer-details/customer-details.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
     IngredientAddEditComponent,
     IngredientDeleteDialogComponent,
     ScrollToTopComponent,
+    OrderDetailsComponent,
+    ProductDetailsComponent,
+    CustomerDetailsComponent,
   ],
   imports: [
     BrowserModule,

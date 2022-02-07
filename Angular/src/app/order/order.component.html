@@ -16,7 +16,6 @@
       <tr>
         <th>Order#</th>
         <th>Price</th>
-        <th>City</th>
         <th>Address</th>
         <th>Actions</th>
       </tr>
@@ -25,8 +24,7 @@
       <tr *ngFor="let order of orders">
         <td>{{ order.id }}</td>
         <td>{{ order.price }}</td>
-        <td>{{ order.city }}</td>
-        <td>{{ order.address }}</td>
+        <td>{{ order.city }}, {{ order.address }}</td>
         <td class="align-items">
           <a
             class="text-info"

@@ -1,0 +1,27 @@
+<div class="container my-4">
+  <h1 class="page-title">Product Details</h1>
+  <hr />
+  <button mat-raised-button [routerLink]="['/products']">Back to list</button>
+  <hr />
+
+  <div class="row mb-3">
+    <div class="col-md-2 font-weight-bold">Name</div>
+    <div class="col-md-10">{{ product.name }}</div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-2 font-weight-bold">Description</div>
+    <div class="col-md-10">{{ product.description }}</div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-2 font-weight-bold">Price</div>
+    <div class="col-md-10">JOD {{ product.productPrice }}</div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-2 font-weight-bold">Ingredients</div>
+    <div class="col-md-10">
+      <div *ngFor="let ingredient of product.ingredients">
+        {{ ingredient.name }}
+      </div>
+    </div>
+  </div>
+</div>

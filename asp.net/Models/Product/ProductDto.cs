@@ -18,5 +18,6 @@ namespace Models.Product
         public string PicUrl { get; set; }
         public List<IngredientDto> Ingredients { get; set; }
         public List<OrderDto> Orders { get; set; }
+
     }
 }

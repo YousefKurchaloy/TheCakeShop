@@ -71,11 +71,25 @@
     </div>
     <div>
       <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Customer</mat-label>
+        <mat-select formControlName="customerId">
+          <mat-option
+            *ngFor="let customer of customersLookup"
+            [value]="customer.id"
+          >
+            {{ customer.fullName }}
+          </mat-option>
+        </mat-select>
+        <mat-error>Customer are required</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill" class="w-100">
         <mat-label>Products</mat-label>
         <mat-select
           formControlName="products"
           multiple
-          [compareWith]="compareProducts"
+          [compareWith]="compareProductsFn"
         >
           <mat-option *ngFor="let product of productsLookup" [value]="product">
             {{ product.name }}

@@ -1,0 +1,31 @@
+<div class="container my-4">
+  <h1 class="page-title">Order Details</h1>
+  <hr />
+  <button mat-raised-button [routerLink]="['/orders']">Back to list</button>
+  <hr />
+
+  <div class="row mb-3">
+    <div class="col-md-2 font-weight-bold">Price total</div>
+    <div class="col-md-10">JOD {{ order.price }}</div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-2 font-weight-bold">Order Status</div>
+    <div class="col-md-10">
+      {{ order.orderStatus }}
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-2 font-weight-bold">Customer name</div>
+    <div class="col-md-10">{{ order?.customer?.fullName }}</div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-2 font-weight-bold">Address</div>
+    <div class="col-md-10">{{ order.city }}, {{ order.address }}</div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-2 font-weight-bold">Products</div>
+    <div class="col-md-10">
+      <div *ngFor="let product of order.products">{{ product.name }}</div>
+    </div>
+  </div>
+</div>

@@ -10,5 +10,6 @@ export interface Order {
   address: string;
   products: Product[];
   customer: Customer;
+  customerId?: number;
   orderStatus: OrderStatus;
 }

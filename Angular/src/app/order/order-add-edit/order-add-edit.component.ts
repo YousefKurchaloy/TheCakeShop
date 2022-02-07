@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CustomerService } from 'src/app/customer/customer.service';
 import { ProductService } from 'src/app/product/product.service';
 import { PageMode } from 'src/app/shared/enums/PageMode';
+import { Customer } from 'src/app/shared/models/Customer';
 import { Order } from 'src/app/shared/models/Order';
 import { Product } from 'src/app/shared/models/Product';
 import { OrderService } from '../order.service';
@@ -14,17 +16,20 @@ import { OrderService } from '../order.service';
 })
 export class OrderAddEditComponent implements OnInit {
   pageModeEnum = PageMode;
+
   orderId: number = 0;
+  pageMode: PageMode = PageMode.Create;
 
   productsLookup!: Product[];
+  customersLookup!: Customer[];
 
-  pageMode: PageMode = PageMode.Create;
   orderForm = this.fb.group({
     id: [0],
     city: ['', Validators.required],
     address: ['', Validators.required],
     orderStatus: ['Making', Validators.required],
     products: ['', Validators.required],
+    customerId: [''],
   });
 
   constructor(
@@ -32,7 +37,8 @@ export class OrderAddEditComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private orderSvc: OrderService,
-    private productSvc: ProductService
+    private productSvc: ProductService,
+    private customerSvc: CustomerService
   ) {}
 
   ngOnInit(): void {
@@ -43,6 +49,7 @@ export class OrderAddEditComponent implements OnInit {
     }
 
     this.getProducts();
+    this.getCustomers();
   }
 
   addEditOrder(): void {
@@ -61,7 +68,7 @@ export class OrderAddEditComponent implements OnInit {
     }
   }
 
-  compareProducts(product1: Product, product2: Product): boolean {
+  compareProductsFn(product1: Product, product2: Product): boolean {
     return product1 && product2
       ? product1.id === product2.id
       : product1 === product2;
@@ -73,10 +80,12 @@ export class OrderAddEditComponent implements OnInit {
     this.orderSvc.getOrder(this.orderId).subscribe((orderFromServer) => {
       this.orderForm.patchValue({
         id: orderFromServer.id,
-        price: orderFromServer.price,
+        // price: orderFromServer.price,
         city: orderFromServer.city,
         address: orderFromServer.address,
         orderStatus: orderFromServer.orderStatus,
+        customerId: orderFromServer.customerId,
+        products: orderFromServer.products,
       });
     });
   }
@@ -91,6 +100,11 @@ export class OrderAddEditComponent implements OnInit {
   private getProducts() {
     this.productSvc.getProducts().subscribe((res) => {
       this.productsLookup = res;
+    });
+  }
+  private getCustomers() {
+    this.customerSvc.getCustomers().subscribe((res) => {
+      this.customersLookup = res;
     });
   }
 
