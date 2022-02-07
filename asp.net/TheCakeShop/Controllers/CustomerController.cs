@@ -32,7 +32,7 @@ namespace TheCakeShop.Controllers
         [HttpGet]
         public async Task<IEnumerable<CustomerDto>> GetCustomers()
         {
-            var customers= await _context.Customers.ToListAsync();
+            var customers= await _context.Customers.Include(c => c.Orders).ToListAsync();
             var customerDtos = _mapper.Map<List<Customer>, List<CustomerDto>>(customers);
             return customerDtos;
         }

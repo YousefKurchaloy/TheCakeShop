@@ -11,8 +11,6 @@
     Add New Customer
   </button>
 
-  <mat-spinner class="mx-auto mt-5" *ngIf="showSpinner"></mat-spinner>
-
   <table class="table">
     <thead>
       <tr>
@@ -21,6 +19,7 @@
         <th>Actions</th>
       </tr>
     </thead>
+
     <tbody>
       <tr *ngFor="let customer of customers">
         <td>{{ customer.fullName }}</td>
@@ -48,14 +47,24 @@
             <mat-icon>delete</mat-icon>
           </a>
           <a
+            *ngIf="customer.orders.length > 0"
             class="pointer"
             matTooltip="Order History"
             [routerLink]="['/customers/history/', customer.id]"
           >
             <mat-icon>history</mat-icon>
           </a>
+          <span
+            *ngIf="customer.orders.length == 0"
+            class="pointer text-muted"
+            matTooltip="Customer doesn't have any orders yet"
+          >
+            <mat-icon>history</mat-icon>
+          </span>
         </td>
       </tr>
     </tbody>
   </table>
+
+  <mat-spinner class="mx-auto" *ngIf="showSpinner"></mat-spinner>
 </div>
