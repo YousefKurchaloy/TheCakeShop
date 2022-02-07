@@ -10,6 +10,7 @@ import { CustomerService } from '../customer.service';
 })
 export class CustomerDetailsComponent implements OnInit {
   customer!: Customer;
+  showSpinner: boolean = true;
 
   constructor(
     private customerSvc: CustomerService,
@@ -21,6 +22,7 @@ export class CustomerDetailsComponent implements OnInit {
 
     this.customerSvc.getCustomer(customerId).subscribe((res) => {
       this.customer = res;
+      this.showSpinner = false;
     });
   }
 }

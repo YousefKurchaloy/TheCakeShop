@@ -2,14 +2,13 @@
   <h1 class="page-title">Ingredients</h1>
   <hr />
 
-  <button
-    mat-raised-button
-    color="primary"
-    class="mb-3"
-    [routerLink]="['/ingredients/add']"
-  >
+  <button mat-raised-button color="primary" [routerLink]="['/ingredients/add']">
     Add New Ingredient
   </button>
+  <hr />
+
+  <mat-spinner class="mx-auto mt-5" *ngIf="showSpinner"></mat-spinner>
+
   <div class="row">
     <div *ngFor="let ingredient of ingredients" class="card col-md-2 mx-3 my-3">
       <div class="card-body">

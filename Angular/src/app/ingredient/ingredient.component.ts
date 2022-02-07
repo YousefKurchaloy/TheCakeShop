@@ -11,6 +11,7 @@ import { IngredientService } from './ingredient.service';
 })
 export class IngredientComponent implements OnInit {
   ingredients!: Ingredient[];
+  showSpinner: boolean = true;
 
   constructor(
     private ingredientSvc: IngredientService,
@@ -45,6 +46,7 @@ export class IngredientComponent implements OnInit {
   private getIngredients(): void {
     this.ingredientSvc.getIngredients().subscribe((ingredientsFromServer) => {
       this.ingredients = ingredientsFromServer;
+      this.showSpinner = false;
     });
   }
   //#endregion

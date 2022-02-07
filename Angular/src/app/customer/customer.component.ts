@@ -12,6 +12,8 @@ import { CustomerDeleteDialogComponent } from './customer-delete-dialog/customer
 })
 export class CustomerComponent implements OnInit {
   customers!: Customer[];
+  showSpinner: boolean = true;
+
   gender = Gender;
 
   constructor(
@@ -46,6 +48,7 @@ export class CustomerComponent implements OnInit {
   private getCustomers(): void {
     this.customerSvc.getCustomers().subscribe((customerFromServer) => {
       this.customers = customerFromServer;
+      this.showSpinner = false;
     });
   }
 

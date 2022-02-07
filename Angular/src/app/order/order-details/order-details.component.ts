@@ -12,6 +12,7 @@ import { OrderService } from '../order.service';
 export class OrderDetailsComponent implements OnInit {
   order!: Order;
 
+  showSpinner: boolean = true;
   constructor(private orderSvc: OrderService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -19,6 +20,7 @@ export class OrderDetailsComponent implements OnInit {
 
     this.orderSvc.getOrder(orderId).subscribe((res) => {
       this.order = res;
+      this.showSpinner = false;
     });
   }
 }

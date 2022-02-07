@@ -11,6 +11,7 @@ import { CustomerService } from '../customer.service';
 })
 export class CustomerOrderHistoryComponent implements OnInit {
   customer!: Customer;
+  showSpinner: boolean = true;
 
   constructor(
     private customerSvc: CustomerService,
@@ -22,6 +23,7 @@ export class CustomerOrderHistoryComponent implements OnInit {
 
     this.customerSvc.getCustomer(customerId).subscribe((res) => {
       this.customer = res;
+      this.showSpinner = false;
     });
   }
 }

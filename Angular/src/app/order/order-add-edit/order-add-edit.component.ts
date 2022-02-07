@@ -29,7 +29,7 @@ export class OrderAddEditComponent implements OnInit {
     address: ['', Validators.required],
     orderStatus: ['Making', Validators.required],
     products: ['', Validators.required],
-    customerId: [''],
+    customerId: ['', Validators.required],
     orderTime: [Validators.required],
   });
 

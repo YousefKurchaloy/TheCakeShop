@@ -15,6 +15,7 @@ export class OrderComponent implements OnInit {
   orders!: Order[];
   orderStatus = OrderStatus;
   city = City;
+  showSpinner: boolean = true;
 
   constructor(private orderSvc: OrderService, public dialog: MatDialog) {}
 
@@ -45,6 +46,7 @@ export class OrderComponent implements OnInit {
   private getOrders(): void {
     this.orderSvc.getOrders().subscribe((ordersFromServer) => {
       this.orders = ordersFromServer;
+      this.showSpinner = false;
     });
   }
 

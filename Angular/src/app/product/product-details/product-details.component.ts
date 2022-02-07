@@ -10,6 +10,7 @@ import { ProductService } from '../product.service';
 })
 export class ProductDetailsComponent implements OnInit {
   product!: Product;
+  showSpinner: boolean = true;
 
   constructor(
     private productSvc: ProductService,
@@ -21,6 +22,7 @@ export class ProductDetailsComponent implements OnInit {
 
     this.productSvc.getProduct(productId).subscribe((res) => {
       this.product = res;
+      this.showSpinner = false;
     });
   }
 }

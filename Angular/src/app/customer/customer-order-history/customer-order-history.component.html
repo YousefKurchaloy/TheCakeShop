@@ -4,6 +4,8 @@
   <button mat-raised-button [routerLink]="['/customers']">Back to list</button>
   <hr />
 
+  <mat-spinner class="mx-auto mt-5" *ngIf="showSpinner"></mat-spinner>
+
   <table class="table">
     <thead>
       <tr>

@@ -4,23 +4,35 @@
   <button mat-raised-button [routerLink]="['/products']">Back to list</button>
   <hr />
 
-  <div class="row mb-3">
-    <div class="col-md-2 font-weight-bold">Name</div>
-    <div class="col-md-10">{{ product.name }}</div>
-  </div>
-  <div class="row mb-3">
-    <div class="col-md-2 font-weight-bold">Description</div>
-    <div class="col-md-10">{{ product.description }}</div>
-  </div>
-  <div class="row mb-3">
-    <div class="col-md-2 font-weight-bold">Price</div>
-    <div class="col-md-10">{{ product.productPrice }} JOD</div>
-  </div>
-  <div class="row mb-3">
-    <div class="col-md-2 font-weight-bold">Ingredients</div>
-    <div class="col-md-10">
-      <div *ngFor="let ingredient of product.ingredients">
-        {{ ingredient.name }}
+  <mat-spinner class="mx-auto mt-5" *ngIf="showSpinner"></mat-spinner>
+
+  <div class="row">
+    <div class="col-md-4">
+      <img
+        class="rounded w-100"
+        src="{{ product.picUrl }}"
+        alt="Cake Picture"
+      />
+    </div>
+    <div class="col-md-8">
+      <h1 class="col-md-8 text-center mb-4 font-weight-bold">
+        {{ product.name }}
+      </h1>
+      <div class="row mb-3">
+        <div class="col-md-4 font-weight-bold">Description</div>
+        <div class="col-md-8">{{ product.description }}</div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-4 font-weight-bold">Price</div>
+        <div class="col-md-8">{{ product.productPrice }} JOD</div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-4 font-weight-bold">Ingredients</div>
+        <div class="col-md-8">
+          <div *ngFor="let ingredient of product.ingredients">
+            {{ ingredient.name }}
+          </div>
+        </div>
       </div>
     </div>
   </div>

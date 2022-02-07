@@ -11,6 +11,7 @@ import { ProductService } from './product.service';
 })
 export class ProductComponent implements OnInit {
   products!: Product[];
+  showSpinner: boolean = true;
 
   constructor(private productSvc: ProductService, public dialog: MatDialog) {}
 
@@ -41,6 +42,7 @@ export class ProductComponent implements OnInit {
   private getProducts(): void {
     this.productSvc.getProducts().subscribe((productsFromServer) => {
       this.products = productsFromServer;
+      this.showSpinner = false;
     });
   }
   //#endregion
