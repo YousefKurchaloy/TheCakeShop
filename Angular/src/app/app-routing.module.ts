@@ -12,12 +12,14 @@ import { IngredientComponent } from './ingredient/ingredient.component';
 import { OrderDetailsComponent } from './order/order-details/order-details.component';
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
 import { CustomerDetailsComponent } from './customer/customer-details/customer-details.component';
+import { CustomerOrderHistoryComponent } from './customer/customer-order-history/customer-order-history.component';
 
 const routes: Routes = [
   { path: 'customers', component: CustomerComponent },
   { path: 'customers/add', component: CustomerAddEditComponent },
   { path: 'customers/edit/:id', component: CustomerAddEditComponent },
   { path: 'customers/:id', component: CustomerDetailsComponent },
+  { path: 'customers/history/:id', component: CustomerOrderHistoryComponent },
 
   { path: 'orders', component: OrderComponent },
   { path: 'orders/add', component: OrderAddEditComponent },

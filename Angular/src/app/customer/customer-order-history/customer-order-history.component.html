@@ -1,0 +1,35 @@
+<div class="container my-4">
+  <h1 class="page-title">Customer Order History</h1>
+  <hr />
+  <button mat-raised-button [routerLink]="['/customers']">Back to list</button>
+  <hr />
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Order#</th>
+        <th>Price</th>
+        <th>Order Status</th>
+        <th>Address</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of customer.orders">
+        <td>{{ order.id }}</td>
+        <td>{{ order.price }} JOD</td>
+        <td>{{ order.orderStatus }}</td>
+        <td>{{ order.city }}, {{ order.address }}</td>
+        <td>
+          <a
+            class="text-info"
+            matTooltip="Order Details"
+            [routerLink]="['/orders/', order.id]"
+          >
+            <mat-icon>info</mat-icon>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

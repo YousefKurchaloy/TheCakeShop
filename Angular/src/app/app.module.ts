@@ -25,6 +25,7 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { OrderDetailsComponent } from './order/order-details/order-details.component';
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
 import { CustomerDetailsComponent } from './customer/customer-details/customer-details.component';
+import { CustomerOrderHistoryComponent } from './customer/customer-order-history/customer-order-history.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { CustomerDetailsComponent } from './customer/customer-details/customer-d
     OrderDetailsComponent,
     ProductDetailsComponent,
     CustomerDetailsComponent,
+    CustomerOrderHistoryComponent,
   ],
   imports: [
     BrowserModule,

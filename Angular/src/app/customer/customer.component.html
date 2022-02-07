@@ -45,7 +45,11 @@
           >
             <mat-icon>delete</mat-icon>
           </a>
-          <a class="pointer">
+          <a
+            class="pointer"
+            matTooltip="Order History"
+            [routerLink]="['/customers/history/', customer.id]"
+          >
             <mat-icon>history</mat-icon>
           </a>
         </td>
