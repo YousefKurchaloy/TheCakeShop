@@ -30,6 +30,7 @@ export class OrderAddEditComponent implements OnInit {
     orderStatus: ['Making', Validators.required],
     products: ['', Validators.required],
     customerId: [''],
+    orderTime: [Validators.required],
   });
 
   constructor(
@@ -80,9 +81,9 @@ export class OrderAddEditComponent implements OnInit {
     this.orderSvc.getOrder(this.orderId).subscribe((orderFromServer) => {
       this.orderForm.patchValue({
         id: orderFromServer.id,
-        // price: orderFromServer.price,
         city: orderFromServer.city,
         address: orderFromServer.address,
+        orderTime: orderFromServer.orderTime,
         orderStatus: orderFromServer.orderStatus,
         customerId: orderFromServer.customerId,
         products: orderFromServer.products,

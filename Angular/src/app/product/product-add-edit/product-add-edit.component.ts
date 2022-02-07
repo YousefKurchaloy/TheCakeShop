@@ -20,6 +20,8 @@ export class ProductAddEditComponent implements OnInit {
 
   ingredientsLookup!: Ingredient[];
 
+  picUrlInput = '';
+
   productForm = this.fb.group({
     id: [0],
     name: ['', Validators.required],

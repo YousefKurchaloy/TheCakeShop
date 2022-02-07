@@ -13,19 +13,6 @@
     </div>
     <hr />
 
-    <!-- <div>
-      <mat-form-field appearance="fill" class="w-100">
-        <mat-label>price</mat-label>
-        <span class="pr-2 pb-4" matPrefix>JOD </span>
-        <input
-          matInput
-          placeholder="Price Total"
-          formControlName="price"
-          required
-        />
-        <mat-error>Price is required</mat-error>
-      </mat-form-field>
-    </div> -->
     <div>
       <mat-form-field appearance="fill" class="w-100">
         <mat-label>City</mat-label>
@@ -47,16 +34,24 @@
       </mat-form-field>
     </div>
     <div *ngIf="pageMode == pageModeEnum.Edit">
-      <mat-form-field appearance="fill" class="w-100">
-        <mat-label>Order Status</mat-label>
-        <mat-select formControlName="orderStatus" required>
-          <mat-option value="Making">Making</mat-option>
-          <mat-option value="Shipping">Shipping</mat-option>
-          <mat-option value="Delivered">Delivered</mat-option>
-        </mat-select>
-        <mat-error>Order Status is required</mat-error>
-      </mat-form-field>
+      <div>
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Order Status</mat-label>
+          <mat-select formControlName="orderStatus" required>
+            <mat-option value="Making">Making</mat-option>
+            <mat-option value="Shipping">Shipping</mat-option>
+            <mat-option value="Delivered">Delivered</mat-option>
+          </mat-select>
+          <mat-error>Order Status is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill" class="w-100">
+          <input matInput type="hidden" formControlName="orderTime" />
+        </mat-form-field>
+      </div>
     </div>
+
     <div>
       <mat-form-field appearance="fill" class="w-100">
         <mat-label>Address</mat-label>

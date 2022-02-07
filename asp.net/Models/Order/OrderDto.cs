@@ -1,5 +1,6 @@
 ﻿using Models.Customer;
 using Models.Product;
+using System;
 using System.Collections.Generic;
 using Utilities.Enums;
 
@@ -17,6 +18,8 @@ namespace Models.Order
             public City City { get; set; }
             public string Address { get; set; }
             public OrderStatus OrderStatus { get; set; }
+
+            public DateTime OrderTime { get; set; }
 
             public int? CustomerId { get; set; }
             public CustomerDto Customer { get; set; }

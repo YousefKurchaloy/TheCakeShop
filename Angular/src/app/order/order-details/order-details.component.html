@@ -9,6 +9,10 @@
     <div class="col-md-10">{{ order.price }} JOD</div>
   </div>
   <div class="row mb-3">
+    <div class="col-md-2 font-weight-bold">Order Time</div>
+    <div class="col-md-10">{{ order.orderTime | date: "short" }}</div>
+  </div>
+  <div class="row mb-3">
     <div class="col-md-2 font-weight-bold">Order Status</div>
     <div class="col-md-10">
       {{ order.orderStatus }}

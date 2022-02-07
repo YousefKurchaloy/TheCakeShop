@@ -3,6 +3,7 @@ using Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models.Order;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -61,12 +62,10 @@ namespace TheCakeShop.Controllers
             var order = _mapper.Map<OrderDto, Order>(orderDto);
 
             await UpdateOrderProducts(orderDto, order);
-          //var priceTotal = _context.Products
-          //      .Where(p => orderDto.ProductsIds.Contains(p.Id))
-          //      .Sum(p => p.ProductPrice);
+            SumProductPriceAndAddToOrder(orderDto, order);
 
-            // priceTotal = order.Price;
-            // _context.Orders.AddRange(priceTotal);
+            order.OrderTime = DateTime.Now;
+           
 
             await _context.AddAsync(order);
             await _context.SaveChangesAsync();
@@ -85,6 +84,7 @@ namespace TheCakeShop.Controllers
             _mapper.Map(orderDto, order);
 
             await UpdateOrderProducts(orderDto,order);
+            SumProductPriceAndAddToOrder(orderDto, order);
 
             if (orderDto.CustomerId.HasValue)
             {
@@ -110,8 +110,13 @@ namespace TheCakeShop.Controllers
 
         #region Private methods
 
-        private async Task UpdateOrderProducts(OrderDto orderDto,Order order)
+        private void SumProductPriceAndAddToOrder(OrderDto orderDto, Order order)
+        {
+            var productIds = GetProductsIdsFromDto(orderDto);
+            order.Price = _context.Products.Where(p => productIds.Contains(p.Id)).Sum(p => p.ProductPrice);
+        }
 
+        private async Task UpdateOrderProducts(OrderDto orderDto,Order order)
         {   var productIds = GetProductsIdsFromDto(orderDto);
             var products = await _context.Products.Where(p => productIds.Contains(p.Id)).ToListAsync();
 

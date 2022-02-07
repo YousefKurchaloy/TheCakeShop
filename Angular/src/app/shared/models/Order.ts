@@ -6,6 +6,7 @@ import { Product } from './Product';
 export interface Order {
   id: number;
   price: number;
+  orderTime: Date;
   city: City;
   address: string;
   products: Product[];

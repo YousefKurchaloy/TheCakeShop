@@ -9,6 +9,7 @@
       <tr>
         <th>Order#</th>
         <th>Price</th>
+        <th>Order Time</th>
         <th>Order Status</th>
         <th>Address</th>
         <th>Details</th>
@@ -18,6 +19,7 @@
       <tr *ngFor="let order of customer.orders">
         <td>{{ order.id }}</td>
         <td>{{ order.price }} JOD</td>
+        <td>{{ order.orderTime | date: "short" }}</td>
         <td>{{ order.orderStatus }}</td>
         <td>{{ order.city }}, {{ order.address }}</td>
         <td>
