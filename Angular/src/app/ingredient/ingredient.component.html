@@ -11,25 +11,27 @@
     Add New Ingredient
   </button>
   <div class="row">
-    <div *ngFor="let ingredient of ingredients" class="card col-md-3 mx-4 my-3">
+    <div *ngFor="let ingredient of ingredients" class="card col-md-2 mx-3 my-3">
       <div class="card-body">
         <h3 class="card-title">{{ ingredient.name }}</h3>
         <p *ngIf="this.ingredient.isVegan == true">Vegan</p>
         <p *ngIf="this.ingredient.isVegan == false">Not Vegan</p>
-        <a
-          class="ml-1"
-          matTooltip="Edit Ingredient"
-          [routerLink]="['/ingredients/edit', ingredient.id]"
-        >
-          <mat-icon>edit</mat-icon>
-        </a>
-        <a
-          class="text-danger pointer"
-          (click)="deleteIngredient(ingredient.id)"
-          matTooltip="Delete Ingredient"
-        >
-          <mat-icon>delete</mat-icon>
-        </a>
+        <div class="text-center">
+          <a
+            class="ml-1"
+            matTooltip="Edit Ingredient"
+            [routerLink]="['/ingredients/edit', ingredient.id]"
+          >
+            <mat-icon>edit</mat-icon>
+          </a>
+          <a
+            class="text-danger pointer"
+            (click)="deleteIngredient(ingredient.id)"
+            matTooltip="Delete Ingredient"
+          >
+            <mat-icon>delete</mat-icon>
+          </a>
+        </div>
       </div>
     </div>
   </div>
