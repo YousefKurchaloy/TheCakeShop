@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "..\Entities\Ent
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utilities", "..\Utilities\Utilities.csproj", "{74F41837-5C90-472B-918B-FE5F685179C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "..\Models\Models.csproj", "{5BFF8689-9152-43CC-ADA7-CA4291A12186}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dtos", "..\Models\Dtos.csproj", "{5BFF8689-9152-43CC-ADA7-CA4291A12186}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

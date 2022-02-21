@@ -64,16 +64,16 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj": {
+    "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Dtos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj",
-        "projectName": "Models",
-        "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Dtos.csproj",
+        "projectName": "Dtos",
+        "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Dtos.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\obj\\",
         "projectStyle": "PackageReference",
@@ -128,7 +128,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -159,8 +159,8 @@
               "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj"
+              "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Dtos.csproj": {
+                "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Dtos.csproj"
               },
               "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Utilities\\Utilities.csproj": {
                 "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Utilities\\Utilities.csproj"
@@ -231,12 +231,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.12, 5.0.12]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -245,7 +239,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -300,12 +294,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

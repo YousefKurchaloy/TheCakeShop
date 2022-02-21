@@ -1,7 +1,7 @@
-﻿using Models.Product;
+﻿using Dtos.Product;
 using System.Collections.Generic;
 
-namespace Models.Ingredient
+namespace Dtos.Ingredient
 {
     public class IngredientDto
     {

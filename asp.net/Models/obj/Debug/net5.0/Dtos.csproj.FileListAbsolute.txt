@@ -1,0 +1,15 @@
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\bin\Debug\net5.0\Dtos.deps.json
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\bin\Debug\net5.0\Dtos.dll
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\bin\Debug\net5.0\Dtos.pdb
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\bin\Debug\net5.0\Utilities.dll
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\bin\Debug\net5.0\Utilities.pdb
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\obj\Debug\net5.0\Dtos.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\obj\Debug\net5.0\Dtos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\obj\Debug\net5.0\Dtos.AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\obj\Debug\net5.0\Dtos.AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\obj\Debug\net5.0\Dtos.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\obj\Debug\net5.0\Dtos.csproj.CopyComplete
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\obj\Debug\net5.0\Dtos.dll
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\obj\Debug\net5.0\ref\Dtos.dll
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\obj\Debug\net5.0\Dtos.pdb
+C:\Users\LENOVO\source\repos\TheCakeShop\asp.net\Models\obj\Debug\net5.0\refint\Dtos.dll

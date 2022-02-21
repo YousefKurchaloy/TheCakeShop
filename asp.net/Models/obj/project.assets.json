@@ -316,9 +316,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj",
-      "projectName": "Models",
-      "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Dtos.csproj",
+      "projectName": "Dtos",
+      "projectPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Dtos.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\obj\\",
       "projectStyle": "PackageReference",
@@ -373,7 +373,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

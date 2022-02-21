@@ -34,6 +34,7 @@
       "TheCakeShop/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
+          "Dtos": "1.0.0",
           "Entities": "1.0.0",
           "Microsoft.AspNet.WebApi.Cors": "5.2.7",
           "Microsoft.AspNet.WebApi.WebHost": "5.2.7",
@@ -42,7 +43,6 @@
           "Microsoft.EntityFrameworkCore.Tools": "5.0.13",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "5.0.2",
-          "Models": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Swashbuckle.AspNetCore.Newtonsoft": "6.2.3",
           "Utilities": "1.0.0",
@@ -2065,6 +2065,18 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "Dtos/1.0.0": {
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
+          "Utilities": "1.0.0"
+        },
+        "runtime": {
+          "Dtos.dll": {}
+        },
+        "compile": {
+          "Dtos.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
@@ -2075,18 +2087,6 @@
         },
         "compile": {
           "Entities.dll": {}
-        }
-      },
-      "Models/1.0.0": {
-        "dependencies": {
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
-          "Utilities": "1.0.0"
-        },
-        "runtime": {
-          "Models.dll": {}
-        },
-        "compile": {
-          "Models.dll": {}
         }
       },
       "Utilities/1.0.0": {
@@ -4757,12 +4757,12 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
-    "Entities/1.0.0": {
+    "Dtos/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Models/1.0.0": {
+    "Entities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

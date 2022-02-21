@@ -2,7 +2,7 @@
 using Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Models.Order;
+using Dtos.Order;
 using System;
 using System.Collections.Generic;
 using System.Linq;

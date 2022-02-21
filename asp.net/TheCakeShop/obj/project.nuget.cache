@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4eS/Eye35OOnMEh2NQ9i5FF6vR5iZgPSocpKtVMcTLj+GtT01UEw3Und8PKGN2wPUX51owLU6KS+Nzs+hRUZ4g==",
+  "dgSpecHash": "NMw7+CTLG3Ef4cg1CjsGEvFWPvKePIuvG41nV6smetT/2EiJ70GoaLiZygESu0tktfAgrfSaqVMCOkdERAgQtg==",
   "success": true,
   "projectFilePath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\TheCakeShop\\TheCakeShop.csproj",
   "expectedPackageFiles": [
@@ -144,8 +144,7 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+    "C:\\Users\\LENOVO\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": [
     {

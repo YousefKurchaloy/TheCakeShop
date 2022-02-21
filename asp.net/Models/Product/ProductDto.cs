@@ -1,8 +1,8 @@
-﻿using Models.Ingredient;
-using Models.Order;
+﻿using Dtos.Ingredient;
+using Dtos.Order;
 using System.Collections.Generic;
 
-namespace Models.Product
+namespace Dtos.Product
 {
     public class ProductDto
     {

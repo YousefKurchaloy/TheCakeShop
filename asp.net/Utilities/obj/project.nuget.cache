@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "v/fAWznfCKpWneB5n89NrqO6xmSiYbAONZKeU5ui1gPqKju1vgQQZQDlm48QpO0vo4fE3iFJqeH23/vPECcKJw==",
+  "dgSpecHash": "I0WHBmNYBWXJGJOOBQgT8HCou1jAxCyZwKbz1Q5pSO0zqRW9E8DlNla4Rope2XUVX/0k6IT62QC7vQ8fL0O2JA==",
   "success": true,
   "projectFilePath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Utilities\\Utilities.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,10 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\LENOVO\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

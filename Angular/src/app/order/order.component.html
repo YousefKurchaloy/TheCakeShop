@@ -15,6 +15,7 @@
     <thead>
       <tr>
         <th>Order#</th>
+        <th>Status</th>
         <th>Price</th>
         <th>Order Time</th>
         <th>Address</th>
@@ -24,6 +25,7 @@
     <tbody>
       <tr *ngFor="let order of orders">
         <td>{{ order.id }}</td>
+        <td>{{ order.orderStatus }}</td>
         <td>{{ order.price }} JOD</td>
         <td>{{ order.orderTime | date: "short" }}</td>
         <td>{{ order.city }}, {{ order.address }}</td>

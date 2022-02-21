@@ -19,7 +19,7 @@ mat-icon {
   color: #4267b2;
 }
 .fb-logo:hover {
-  color: #0e3c97;
+  color: #1649b1;
 }
 .wa-logo {
   color: #25d366;
@@ -27,9 +27,9 @@ mat-icon {
 .wa-logo:hover {
   color: #0f923f;
 }
-.phone-logo {
-  color: #e67e00;
+.twtr-logo {
+  color: #3199e6;
 }
-.phone-logo:hover {
-  color: #945100;
+.twtr-logo:hover {
+  color: #007fe0;
 }

@@ -15,9 +15,12 @@ namespace Entities
         public City City { get; set; }
         public string Address { get; set; }
         public DateTime OrderTime { get; set; }
+
+
         public List<Product> Products { get; set; }
         public int? CustomerId { get; set; }
         public Customer Customer { get; set; }
+
         public OrderStatus OrderStatus { get; set; }
     }
 }

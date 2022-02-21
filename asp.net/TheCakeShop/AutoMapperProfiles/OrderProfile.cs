@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Entities;
-using Models.Order;
+using Dtos.Order;
 
 namespace TheCakeShop.AutoMapperProfiles
 {

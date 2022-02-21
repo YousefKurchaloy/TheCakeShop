@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "97hHmEBMwPA3gceEu8ZwyBa0wVs9Uv74/c6cY1J0qML98WZT5kEo7DN4czXtiAP6kCg9lvksyOG/Y5TsarubUg==",
+  "dgSpecHash": "hiiknOni/NAsn/1/ozIGMdiVLWyBwhg1Ts5xRttAcPKf/ih7Kr2tjIxSnn+fDT4J+ferJzUGZ8hIeFWbcv4wzg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Models.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\source\\repos\\TheCakeShop\\asp.net\\Models\\Dtos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

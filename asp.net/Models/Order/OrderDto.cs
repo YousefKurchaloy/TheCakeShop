@@ -1,10 +1,10 @@
-﻿using Models.Customer;
-using Models.Product;
+﻿using Dtos.Customer;
+using Dtos.Product;
 using System;
 using System.Collections.Generic;
 using Utilities.Enums;
 
-namespace Models.Order
+namespace Dtos.Order
 {
     public class OrderDto
     {

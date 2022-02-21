@@ -2,7 +2,7 @@
 using Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Models.Product;
+using Dtos.Product;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

@@ -1,9 +1,9 @@
-﻿using Models.Order;
+﻿using Dtos.Order;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using Utilities.Enums;
 
-namespace Models.Customer
+namespace Dtos.Customer
 {
     public class CustomerDto
     {
