@@ -10,10 +10,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatRadioModule } from '@angular/material/radio';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [],
@@ -28,10 +27,9 @@ import { MatRadioModule } from '@angular/material/radio';
     MatSnackBarModule,
     MatDialogModule,
     MatProgressSpinnerModule,
-    MatCheckboxModule,
     MatTooltipModule,
     MatFormFieldModule,
-    MatRadioModule,
+    MatSlideToggleModule,
   ],
 })
 export class SharedModule {}

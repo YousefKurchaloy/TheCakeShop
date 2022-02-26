@@ -6,30 +6,42 @@
 
   <mat-spinner class="mx-auto my-5" *ngIf="showSpinner"></mat-spinner>
 
+  <div
+    class="text-warning font-weight-bold my-2"
+    *ngIf="order.customerId == null || order.customerId == 0"
+  >
+    This order has no assigned customer
+  </div>
+
   <div class="row mb-3">
     <div class="col-md-2 font-weight-bold">Price total</div>
     <div class="col-md-10">{{ order.price }} JOD</div>
   </div>
+
   <div class="row mb-3">
     <div class="col-md-2 font-weight-bold">Order Time</div>
     <div class="col-md-10">{{ order.orderTime | date: "short" }}</div>
   </div>
+
   <div class="row mb-3">
     <div class="col-md-2 font-weight-bold">Order Status</div>
     <div class="col-md-10">
       {{ order.orderStatus }}
     </div>
   </div>
-  <div class="row mb-3">
-    <div class="col-md-2 font-weight-bold">Customer name</div>
-    <div class="col-md-10">
-      {{ order?.customer?.fullName }}
+
+  <div *ngIf="order.customerId != null && order.customerId != 0">
+    <div class="row mb-3">
+      <div class="col-md-2 font-weight-bold">Customer name</div>
+      <div class="col-md-10">
+        {{ order?.customer?.fullName }}
+      </div>
     </div>
-  </div>
-  <div class="row mb-3">
-    <div class="col-md-2 font-weight-bold">Customer phone number</div>
-    <div class="col-md-10">
-      {{ order?.customer?.phoneNo }}
+    <div class="row mb-3">
+      <div class="col-md-2 font-weight-bold">Customer phone number</div>
+      <div class="col-md-10">
+        {{ order?.customer?.phoneNo }}
+      </div>
     </div>
   </div>
   <div class="row mb-3">

@@ -33,6 +33,7 @@
         <mat-error>City is required</mat-error>
       </mat-form-field>
     </div>
+
     <div *ngIf="pageMode == pageModeEnum.Edit">
       <div>
         <mat-form-field appearance="fill" class="w-100">
@@ -62,7 +63,7 @@
     <div>
       <mat-form-field appearance="fill" class="w-100">
         <mat-label>Customer</mat-label>
-        <mat-select required formControlName="customerId">
+        <mat-select formControlName="customerId">
           <mat-option
             *ngFor="let customer of customersLookup"
             [value]="customer.id"
@@ -70,7 +71,6 @@
             {{ customer.fullName }}
           </mat-option>
         </mat-select>
-        <mat-error>Customer are required</mat-error>
       </mat-form-field>
     </div>
     <div>

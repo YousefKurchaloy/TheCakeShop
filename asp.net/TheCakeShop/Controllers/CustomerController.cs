@@ -69,6 +69,13 @@ namespace TheCakeShop.Controllers
         public async Task DeleteCustomer(int id)
         {
             var customer = await _context.Customers.FindAsync(id);
+            var ordersCustomerId = await _context.Orders.Where(o => o.CustomerId == id).ToListAsync();
+
+            foreach (var customerId in customer.Orders)
+            {
+                ordersCustomerId = null;
+            }
+
             _context.Customers.Remove(customer);
             await _context.SaveChangesAsync();
 

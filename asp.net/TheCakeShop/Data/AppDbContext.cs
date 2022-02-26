@@ -14,5 +14,13 @@ namespace TheCakeShop.Data
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<Order> Orders { get; set; }
 
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder
+        //        .Entity<Customer>()
+        //        .HasOne(e => e.Orders)
+        //        .WithOne(e => e.CustomerId)
+        //        .OnDelete(DeleteBehavior.ClientCascade);
+        //}
     }
 }
