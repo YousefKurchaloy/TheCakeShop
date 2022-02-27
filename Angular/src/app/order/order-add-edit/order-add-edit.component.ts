@@ -78,15 +78,15 @@ export class OrderAddEditComponent implements OnInit {
   //#region Private functions
 
   preparePageForEditMode() {
-    this.orderSvc.getOrder(this.orderId).subscribe((orderFromServer) => {
+    this.orderSvc.getOrder(this.orderId).subscribe((res) => {
       this.orderForm.patchValue({
-        id: orderFromServer.id,
-        city: orderFromServer.city,
-        address: orderFromServer.address,
-        orderTime: orderFromServer.orderTime,
-        orderStatus: orderFromServer.orderStatus,
-        customerId: orderFromServer.customerId,
-        products: orderFromServer.products,
+        id: res.id,
+        city: res.city,
+        address: res.address,
+        orderTime: res.orderTime,
+        orderStatus: res.orderStatus,
+        customerId: res.customerId,
+        products: res.products,
       });
     });
   }

@@ -44,8 +44,8 @@ export class OrderComponent implements OnInit {
   //#region Private Functions
 
   private getOrders(): void {
-    this.orderSvc.getOrders().subscribe((ordersFromServer) => {
-      this.orders = ordersFromServer;
+    this.orderSvc.getOrders().subscribe((res) => {
+      this.orders = res;
       this.showSpinner = false;
     });
   }

@@ -44,8 +44,8 @@ export class IngredientComponent implements OnInit {
   //#region Private Functions
 
   private getIngredients(): void {
-    this.ingredientSvc.getIngredients().subscribe((ingredientsFromServer) => {
-      this.ingredients = ingredientsFromServer;
+    this.ingredientSvc.getIngredients().subscribe((res) => {
+      this.ingredients = res;
       this.showSpinner = false;
     });
   }

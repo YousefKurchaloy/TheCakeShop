@@ -84,18 +84,16 @@ export class ProductAddEditComponent implements OnInit {
   //#region Private functions
 
   preparePageForEditMode() {
-    this.productSvc
-      .getProduct(this.productId)
-      .subscribe((productFromServer) => {
-        this.productForm.patchValue({
-          id: productFromServer.id,
-          name: productFromServer.name,
-          description: productFromServer.description,
-          productPrice: productFromServer.productPrice,
-          ingredients: productFromServer.ingredients,
-          picUrl: productFromServer.picUrl,
-        });
+    this.productSvc.getProduct(this.productId).subscribe((res) => {
+      this.productForm.patchValue({
+        id: res.id,
+        name: res.name,
+        description: res.description,
+        productPrice: res.productPrice,
+        ingredients: res.ingredients,
+        picUrl: res.picUrl,
       });
+    });
   }
 
   private setPageMode(): void {

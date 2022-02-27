@@ -52,15 +52,13 @@ export class IngredientAddEditComponent implements OnInit {
   //#region Private functions
 
   preparePageForEditMode() {
-    this.ingredientSvc
-      .getIngredient(this.ingredientId)
-      .subscribe((ingredientFromServer) => {
-        this.ingredientForm.patchValue({
-          id: ingredientFromServer.id,
-          name: ingredientFromServer.name,
-          isVegan: ingredientFromServer.isVegan,
-        });
+    this.ingredientSvc.getIngredient(this.ingredientId).subscribe((res) => {
+      this.ingredientForm.patchValue({
+        id: res.id,
+        name: res.name,
+        isVegan: res.isVegan,
       });
+    });
   }
 
   private setPageMode(): void {

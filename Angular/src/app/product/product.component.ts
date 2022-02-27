@@ -40,8 +40,8 @@ export class ProductComponent implements OnInit {
   //#region Private Functions
 
   private getProducts(): void {
-    this.productSvc.getProducts().subscribe((productsFromServer) => {
-      this.products = productsFromServer;
+    this.productSvc.getProducts().subscribe((res) => {
+      this.products = res;
       this.showSpinner = false;
     });
   }

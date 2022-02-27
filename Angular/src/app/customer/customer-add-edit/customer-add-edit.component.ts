@@ -71,18 +71,16 @@ export class CustomerAddEditComponent implements OnInit {
   }
 
   private preparePageForEdit(): void {
-    this.customerSvc
-      .getCustomer(this.customerId)
-      .subscribe((customerFromServer) => {
-        this.customerForm.patchValue({
-          id: customerFromServer.id,
-          firstName: customerFromServer.firstName,
-          lastName: customerFromServer.lastName,
-          gender: customerFromServer.gender,
-          phoneNo: customerFromServer.phoneNo,
-          email: customerFromServer.email,
-        });
+    this.customerSvc.getCustomer(this.customerId).subscribe((res) => {
+      this.customerForm.patchValue({
+        id: res.id,
+        firstName: res.firstName,
+        lastName: res.lastName,
+        gender: res.gender,
+        phoneNo: res.phoneNo,
+        email: res.email,
       });
+    });
   }
   //#endregion
 }
