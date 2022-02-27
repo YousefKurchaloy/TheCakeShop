@@ -10,7 +10,7 @@ import { CustomerService } from '../customer.service';
   styleUrls: ['./customer-order-history.component.css'],
 })
 export class CustomerOrderHistoryComponent implements OnInit {
-  customer!: Customer;
+  orders!: Order[];
   showSpinner: boolean = true;
 
   constructor(
@@ -21,8 +21,8 @@ export class CustomerOrderHistoryComponent implements OnInit {
   ngOnInit(): void {
     var customerId = Number(this.route.snapshot.paramMap.get('id'));
 
-    this.customerSvc.getCustomer(customerId).subscribe((res) => {
-      this.customer = res;
+    this.customerSvc.getCustomerOrderHistory(customerId).subscribe((res) => {
+      this.orders = res;
       this.showSpinner = false;
     });
   }

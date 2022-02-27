@@ -28,7 +28,7 @@ namespace TheCakeShop.Controllers
 
         #endregion
 
-        #region Public Actions 
+        #region Actions 
         
         [HttpGet]
         public async Task<IEnumerable<CustomerDto>> GetCustomers()
@@ -79,6 +79,12 @@ namespace TheCakeShop.Controllers
             _context.Customers.Remove(customer);
             await _context.SaveChangesAsync();
 
+        }
+        [HttpGet("{id}")]
+        public async Task<List<Order>> GetCustomerOrderHistory(int id)
+        {
+            var customerOrders = await _context.Orders.Where(o => o.CustomerId == id).ToListAsync();
+            return customerOrders;
         }
 
         #endregion

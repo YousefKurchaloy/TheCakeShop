@@ -46,8 +46,8 @@ export class CustomerComponent implements OnInit {
   //#region Private Functions
 
   private getCustomers(): void {
-    this.customerSvc.getCustomers().subscribe((customerFromServer) => {
-      this.customers = customerFromServer;
+    this.customerSvc.getCustomers().subscribe((res) => {
+      this.customers = res;
       this.showSpinner = false;
     });
   }

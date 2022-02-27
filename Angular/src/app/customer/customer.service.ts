@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Customer } from '../shared/models/Customer';
+import { Order } from '../shared/models/Order';
 
 @Injectable({
   providedIn: 'root',
@@ -28,5 +29,10 @@ export class CustomerService {
   }
   deleteCustomer(id: number): Observable<any> {
     return this.http.delete<Customer>(this.apiUrl + 'DeleteCustomer/' + id);
+  }
+  getCustomerOrderHistory(id: number) {
+    return this.http.get<Order[]>(
+      this.apiUrl + 'GetCustomerOrderHistory/' + id
+    );
   }
 }
